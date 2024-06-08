@@ -19,6 +19,20 @@
           "buildTarget": "backend:build:production"
         }
       }
+    },
+    "format:check": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "command": "npm run backend:prettier:check"
+      }
+    },
+    "format:fix": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "command": "npm run backend:prettier:fix"
+      }
     }
   }
 }

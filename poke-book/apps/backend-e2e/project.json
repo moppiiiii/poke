@@ -12,6 +12,20 @@
         "passWithNoTests": true
       },
       "dependsOn": ["backend:build"]
+    },
+    "format:check": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "command": "npm run backend-e2e:prettier:check"
+      }
+    },
+    "format:fix": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "command": "npm run backend-e2e:prettier:fix"
+      }
     }
   }
 }

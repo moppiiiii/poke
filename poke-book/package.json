@@ -4,7 +4,17 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run-many --target serve --all --parallel",
-    "build": "nx run-many --target build --all --parallel"
+    "build": "nx run-many --target build --all --parallel",
+    "format:check": "nx run-many --target format:check --all --parallel",
+    "format:fix": "nx run-many --target format:fix --all --parallel",
+    "backend:prettier:check": "prettier --check \"apps/backend/**/*.{js,ts,tsx}\"",
+    "backend-e2e:prettier:check": "prettier --check \"apps/backend-e2e/**/*.{js,ts,tsx}\"",
+    "frontend:prettier:check": "prettier --check \"apps/frontend/**/*.{js,ts,tsx,scss}\"",
+    "frontend-e2e:prettier:check": "prettier --check \"apps/frontend-e2e/**/*.{js,ts,tsx}\"",
+    "backend:prettier:fix": "prettier --write \"apps/backend/**/*.{js,ts,tsx}\"",
+    "backend-e2e:prettier:fix": "prettier --write \"apps/backend-e2e/**/*.{js,ts,tsx}\"",
+    "frontend:prettier:fix": "prettier --write \"apps/frontend/**/*.{js,ts,tsx,scss}\"",
+    "frontend-e2e:prettier:fix": "prettier --write \"apps/frontend-e2e/**/*.{js,ts,tsx}\""
   },
   "private": true,
   "dependencies": {
