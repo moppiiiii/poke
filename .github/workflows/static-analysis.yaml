@@ -12,5 +12,6 @@ jobs:
           node-version: 20
       - run: npm install -g pnpm
       - run: pnpm i
-      - run: pnpm check
+      - run: pnpm lint:check
+      - run: pnpm format:check
       - run: pnpm build
