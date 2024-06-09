@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: false
+  commands:
+    audit:
+      run: pnpm audit
+    eslint:fix:
+      run: pnpm lint:fix && git add {staged_files}
+    prettier:fix:
+      run: pnpm format:fix {staged_files} && git add {staged_files}
