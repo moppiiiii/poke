@@ -10,14 +10,21 @@
       "executor": "nx:run-commands",
       "cache": true,
       "options": {
-        "command": "npm run frontend-e2e:prettier:check"
+        "command": "pnpm frontend-e2e:prettier:check"
       }
     },
     "format:fix": {
       "executor": "nx:run-commands",
       "cache": true,
       "options": {
-        "command": "npm run frontend-e2e:prettier:fix"
+        "command": "pnpm frontend-e2e:prettier:fix"
+      }
+    },
+    "e2e:test": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "command": "pnpm frontend-e2e:test"
       }
     }
   }

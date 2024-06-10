@@ -10,6 +10,8 @@
     "lint:fix": "nx run-many --target lint --fix --all --parallel",
     "format:check": "nx run-many --target format:check --all --parallel",
     "format:fix": "nx run-many --target format:fix --all --parallel",
+    "test:e2e": "nx run-many --target e2e:test --all --parallel",
+    "test:e2e:report": "playwright show-report",
     "backend:prettier:check": "prettier --check \"apps/backend/**/*.{js,ts,tsx}\"",
     "backend-e2e:prettier:check": "prettier --check \"apps/backend-e2e/**/*.{js,ts,tsx}\"",
     "frontend:stylelint:check": "stylelint \"apps/frontend/**/*.scss\"",
@@ -20,6 +22,7 @@
     "frontend:prettier:fix": "prettier --write \"apps/frontend/**/*.{js,ts,tsx,scss}\"",
     "frontend-e2e:prettier:fix": "prettier --write \"apps/frontend-e2e/**/*.{js,ts,tsx}\"",
     "frontend:stylelint:fix": "stylelint --fix \"apps/frontend/**/*.scss\"",
+    "frontend-e2e:test": "playwright test --config=\"apps/frontend-e2e/playwright.config.ts\"",
     "init:lefthook": "lefthook install"
   },
   "private": true,
@@ -48,6 +51,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.9.1",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
     "@nx/cypress": "19.2.2",

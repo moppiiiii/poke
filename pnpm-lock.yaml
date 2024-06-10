@@ -73,6 +73,9 @@ dependencies:
     version: 2.6.3
 
 devDependencies:
+  '@axe-core/playwright':
+    specifier: ^4.9.1
+    version: 4.9.1(playwright-core@1.44.1)
   '@nestjs/schematics':
     specifier: ^10.0.1
     version: 10.1.1(typescript@5.4.5)
@@ -595,6 +598,15 @@ packages:
     transitivePeerDependencies:
       - encoding
     dev: false
+
+  /@axe-core/playwright@4.9.1(playwright-core@1.44.1):
+    resolution: {integrity: sha512-8m4WZbZq7/aq7ZY5IG8GqV+ZdvtGn/iJdom+wBg+iv/3BAOBIfNQtIu697a41438DzEEyptXWmC3Xl5Kx/o9/g==}
+    peerDependencies:
+      playwright-core: '>= 1.0.0'
+    dependencies:
+      axe-core: 4.9.1
+      playwright-core: 1.44.1
+    dev: true
 
   /@babel/code-frame@7.24.7:
     resolution: {integrity: sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==}
