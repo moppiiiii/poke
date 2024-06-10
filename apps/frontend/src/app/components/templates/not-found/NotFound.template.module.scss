@@ -24,7 +24,7 @@
       align-items: center;
 
       > .not-found-sigh {
-        @include body-emoji;
+        width: 150px;
       }
     }
 
