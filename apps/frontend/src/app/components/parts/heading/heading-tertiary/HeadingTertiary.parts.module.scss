@@ -1,0 +1,12 @@
+@import '../../../../styles/typograpy/typograpy';
+@import '../../../../styles/responsive/responsive';
+
+.heading-secondary {
+  @include pc-title-h3;
+}
+
+@include max('sp') {
+  .heading-secondary {
+    @include sp-title-h3;
+  }
+}

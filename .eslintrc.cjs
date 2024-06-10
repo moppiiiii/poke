@@ -94,9 +94,6 @@ module.exports = {
       },
       rules: {
         ...typescriptESLintRules,
-        'require-await': 'off',
-        'no-floating-promises': 'off',
-        'no-unsafe-return': 'off',
       },
     },
     {
@@ -108,12 +105,16 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
       },
+      // TODO: @typescript-eslint/no-unsafe-assignment & @typescript-eslint/no-unsafe-member-access
+      // off -> on
       rules: {
         ...typescriptESLintRules,
         '@typescript-eslint/require-await': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off'
       },
     },
   ],
-  ignorePatterns: ['**/*.md', '**/dist/*'],
+  ignorePatterns: ['**/*.md', '**/dist/*', '**/wdyr.ts'],
 };

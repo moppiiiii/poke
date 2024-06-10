@@ -5,5 +5,7 @@ pre-commit:
       run: pnpm audit
     eslint:fix:
       run: pnpm lint:fix && git add {staged_files}
+    stylelint:fix:
+      run: pnpm frontend:stylelint:fix && git add {staged_files}
     prettier:fix:
       run: pnpm format:fix && git add {staged_files}

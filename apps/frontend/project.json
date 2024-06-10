@@ -11,7 +11,8 @@
       "cache": true,
       "options": {
         "commands": [
-          "npm run frontend:prettier:check"
+          "pnpm run frontend:stylelint:check",
+          "pnpm run frontend:prettier:check"
         ],
         "parallel": false
       }
@@ -21,7 +22,8 @@
       "cache": true,
       "options": {
         "commands": [
-          "npm run frontend:prettier:fix"
+          "pnpm run frontend:stylelint:fix",
+          "pnpm run frontend:prettier:fix"
         ],
         "parallel": false
       }
