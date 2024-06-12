@@ -1,4 +1,7 @@
 {
   "extends": ["plugin:@nx/react", "../../.eslintrc.cjs"],
-  "ignorePatterns": ["storybook-static"]
+  "ignorePatterns": ["storybook-static"],
+  "rules": {
+    "@typescript-eslint/no-unsafe-call": "off"
+  }
 }

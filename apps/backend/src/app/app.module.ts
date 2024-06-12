@@ -4,17 +4,19 @@ import { GraphQLModule } from '@nestjs/graphql';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { PokemonResolver } from './resolvers/pokemon/pokemon.resolver';
 import { UserResolver } from './resolvers/user/user.resolver';
 
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: true,
+      autoSchemaFile: '../schema.gql',
+      sortSchema: true,
     }),
   ],
   controllers: [AppController],
-  providers: [AppService, UserResolver],
+  providers: [AppService, UserResolver, PokemonResolver],
 })
 
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
