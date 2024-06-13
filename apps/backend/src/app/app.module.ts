@@ -11,8 +11,7 @@ import { UserResolver } from './resolvers/user/user.resolver';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: '../schema.gql',
-      sortSchema: true,
+      autoSchemaFile: true,
     }),
   ],
   controllers: [AppController],
