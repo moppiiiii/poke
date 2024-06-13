@@ -1,0 +1,35 @@
+@import '../../../styles/typograpy/typograpy';
+@import '../../../styles/responsive/responsive';
+
+.pokemon-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  background-color: var(--background-primary);
+
+  > .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    padding: 60px 0;
+    padding-inline: 32px;
+    margin: 60px 32px;
+    background-color: var(--background-white);
+    border-radius: 16px;
+  }
+}
+
+@include max('sp') {
+  .pokemon-container {
+    > .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      padding: 32px 0;
+      padding-inline: 16px;
+      margin: 16px;
+    }
+  }
+}
