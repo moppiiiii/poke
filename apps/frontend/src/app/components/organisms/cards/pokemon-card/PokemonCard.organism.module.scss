@@ -1,0 +1,58 @@
+@import '../../../../styles/typograpy/typograpy';
+@import '../../../../styles/responsive/responsive';
+
+.pokemon-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  max-width: 350px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: rgb(50 50 93 / 25%) 0 2px 5px -1px, rgb(0 0 0 / 30%) 0 1px 3px -1px;
+
+  > .pokemon-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  > .pokemon-description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    > .pokemon-id {
+      @include body-s;
+    }
+
+    > .pokemon-name {
+      @include body-l;
+    }
+  }
+}
+
+@include max('sp') {
+  .pokemon-card-wrapper {
+    min-width: 150px;
+    max-width: 250px;
+    padding: 12px;
+
+    > .pokemon-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+
+    > .pokemon-description {
+      > .pokemon-id {
+        @include body-xs;
+      }
+
+      > .pokemon-name {
+        @include body-s;
+      }
+    }
+  }
+}
