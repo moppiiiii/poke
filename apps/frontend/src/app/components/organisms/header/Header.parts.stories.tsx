@@ -10,7 +10,5 @@ export default {
 type Story = StoryObj<typeof Header>;
 
 export const HeaderComponent: Story = {
-  args: {
-    title: 'Poke Book',
-  },
+  render: () => <Header />,
 };

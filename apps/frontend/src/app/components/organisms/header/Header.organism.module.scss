@@ -9,9 +9,14 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 12px 0;
+  height: 80px;
   background-color: var(--background-white);
   box-shadow: 0 3px 6px rgb(0 0 0 / 20%);
+
+  > .logo-image {
+    width: 150px;
+    height: 70px;
+  }
 }
 
 @include max('sp') {

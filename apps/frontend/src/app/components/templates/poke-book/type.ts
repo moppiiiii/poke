@@ -1,4 +1,4 @@
-export type HomeTemplateProps = {
+export type PokeBookTemplateProps = {
   isLoading: boolean;
   pokemons?: {
     id: number;

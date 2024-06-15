@@ -9,7 +9,7 @@ export default {
 
 type Story = StoryObj<typeof PokemonCard>;
 
-export const HeaderComponent: Story = {
+export const PokemonCardComponent: Story = {
   args: {
     id: 1,
     name: 'bulbasaur',
