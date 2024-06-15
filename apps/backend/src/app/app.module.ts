@@ -4,7 +4,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { PokemonResolver } from './resolvers/pokemon/pokemon.resolver';
+import { PokemonDetailResolver, PokemonResolver } from './resolvers/pokemon/pokemon.resolver';
 import { UserResolver } from './resolvers/user/user.resolver';
 
 @Module({
@@ -15,7 +15,7 @@ import { UserResolver } from './resolvers/user/user.resolver';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService, UserResolver, PokemonResolver],
+  providers: [AppService, UserResolver, PokemonResolver, PokemonDetailResolver],
 })
 
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
