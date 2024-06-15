@@ -5,9 +5,6 @@ export const POKEMON = gql`
     pokemons {
       id
       name
-      sprites {
-        front_default
-      }
     }
   }
 `;

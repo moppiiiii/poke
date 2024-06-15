@@ -1,15 +1,16 @@
 import React from 'react';
 
-import Sigh from '../../../../assets/images/sigh.webp';
-import Header from '../../organisms/header/Header.organism';
-import LinkButton from '../../parts/button/link-button/LinkButton.parts';
-import HeadingSecondary from '../../parts/heading/heading-secondary/HeadingSecondary.parts';
+import Header from '@/app/components/organisms/header/Header.organism';
+import LinkButton from '@/app/components/parts/button/link-button/LinkButton.parts';
+import HeadingSecondary from '@/app/components/parts/heading/heading-secondary/HeadingSecondary.parts';
+import Sigh from '@/assets/images/sigh.webp';
+
 import styles from './NotFound.template.module.scss';
 
 const NotFoundTemplate: React.FC = () => {
   return (
     <div className={styles['not-found-container']}>
-      <Header title="Poke Book" />
+      <Header />
       <div className={styles['content-wrapper']}>
         <div className={styles['not-found-title']}>
           <HeadingSecondary>404</HeadingSecondary>

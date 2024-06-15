@@ -116,5 +116,5 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['**/*.md', '**/dist/*', '**/wdyr.ts'],
+  ignorePatterns: ['**/*.md', '**/dist/*', '**/wdyr.ts',  '**/vite.config.ts'],
 };

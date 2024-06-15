@@ -1,5 +1,5 @@
-@import '../../../styles/typograpy/typograpy';
-@import '../../../styles/responsive/responsive';
+@import '@/app/styles/typograpy/typograpy';
+@import '@/app/styles/responsive/responsive';
 
 .pokemon-container {
   display: grid;
@@ -45,7 +45,7 @@
           cursor: pointer;
           border-radius: 32px;
 
-          > .pokemon-image {
+          > img {
             width: 60px;
             height: 60px;
           }
@@ -67,7 +67,7 @@
           &:hover {
             background-color: #fff;
 
-            > .pokemon-image {
+            > img {
               width: 80px;
               height: 80px;
             }

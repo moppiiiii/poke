@@ -5,7 +5,7 @@ import type { PokeBookTemplateProps } from '../../components/templates/poke-book
 import { useGetPokemonsQuery } from '../../graphql/generate/generated';
 
 const PokeBookPage: React.FC = () => {
-  const { data, loading, error } = useGetPokemonsQuery();
+  const { data, loading } = useGetPokemonsQuery();
 
   const pokeBookTemplateProps: PokeBookTemplateProps = {
     isLoading: loading,

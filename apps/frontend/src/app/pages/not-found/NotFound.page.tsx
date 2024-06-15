@@ -1,7 +1,7 @@
 import React from 'react';
 
-import NotFoundTemplate from '../../components/templates/not-found/NotFound.template';
-import { useDocumentTitle } from '../../contexts/document-title/DocumentTitle.context';
+import NotFoundTemplate from '@/app/components/templates/not-found/NotFound.template';
+import { useDocumentTitle } from '@/app/contexts/document-title/DocumentTitle.context';
 
 const NotFoundPage: React.FC = () => {
   useDocumentTitle('Poke Book | 404');

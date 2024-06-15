@@ -2,6 +2,7 @@
   "extends": ["plugin:@nx/react", "../../.eslintrc.cjs"],
   "ignorePatterns": ["storybook-static"],
   "rules": {
-    "@typescript-eslint/no-unsafe-call": "off"
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/restrict-template-expressions": "off"
   }
 }
