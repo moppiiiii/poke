@@ -1,13 +1,12 @@
 import React from 'react';
 
-import HeadingPrimary from '../../parts/heading/heading-primary/HeadingPrimary.parts';
+import PokemonLogoImage from '../../../../assets/images/pokemon-logo.webp';
 import styles from './Header.organism.module.scss';
-import type { HeaderProps } from './types';
 
-const Header: React.FC<HeaderProps> = ({ title }) => {
+const Header: React.FC = () => {
   return (
     <div className={styles['header-container']}>
-      <HeadingPrimary>{title}</HeadingPrimary>
+      <img className={styles['logo-image']} src={PokemonLogoImage} alt="pokemon-logo" />
     </div>
   );
 };

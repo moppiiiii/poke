@@ -229,6 +229,9 @@ devDependencies:
   prettier:
     specifier: ^2.6.2
     version: 2.8.8
+  remeda:
+    specifier: ^2.0.10
+    version: 2.0.10
   sass:
     specifier: ^1.55.0
     version: 1.77.4
@@ -14532,6 +14535,12 @@ packages:
       - encoding
     dev: false
 
+  /remeda@2.0.10:
+    resolution: {integrity: sha512-kV+jfOgF1fyzTv9p7n6Ue7XUVtxYv+2wlXmtrP2Bvdb6ElViN88xujslcN9oZPkvnpl4j3Fi2l1O3icQZqD10g==}
+    dependencies:
+      type-fest: 4.20.0
+    dev: true
+
   /remedial@1.0.8:
     resolution: {integrity: sha512-/62tYiOe6DzS5BqVsNpH/nkGlX45C/Sp6V+NtiN6JQNS1Viay7cWkazmRkrQrdFj2eshDe96SIQNIoMxqhzBOg==}
     dev: false
@@ -16097,6 +16106,11 @@ packages:
   /type-fest@2.19.0:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
+    dev: true
+
+  /type-fest@4.20.0:
+    resolution: {integrity: sha512-MBh+PHUHHisjXf4tlx0CFWoMdjx8zCMLJHOjnV1prABYZFHqtFOyauCIK2/7w4oIfwkF8iNhLtnJEfVY2vn3iw==}
+    engines: {node: '>=16'}
     dev: true
 
   /type-is@1.6.18:

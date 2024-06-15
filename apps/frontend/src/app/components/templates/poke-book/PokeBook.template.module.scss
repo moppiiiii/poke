@@ -1,0 +1,93 @@
+@import '../../../styles/typograpy/typograpy';
+@import '../../../styles/responsive/responsive';
+
+.pokemon-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  background-color: var(--background-primary);
+
+  > .pokemon-content-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: calc(100vh - 80px);
+
+    > .pokemon-detail-wrapper {
+      background: linear-gradient(135deg, #ffcccb 0%, #fff 50%, #add8e6 100%);
+    }
+
+    > .pokemon-list-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 32px 80px;
+      background: linear-gradient(135deg, #ff4500 30%, #ffa500 100%);
+
+      > .pokemon-list {
+        width: 100%;
+        height: 80vh;
+        padding-inline: 32px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+          width: 8px;
+          background-color: #753707;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #ff4500;
+        }
+
+        > .pokemon-list-item-wrapper {
+          display: flex;
+          gap: 24px;
+          align-items: center;
+          padding: 8px 24px;
+          cursor: pointer;
+          border-radius: 32px;
+
+          > .pokemon-image {
+            width: 60px;
+            height: 60px;
+          }
+
+          > .pokemon-number {
+            @include body-s;
+          }
+
+          > .pokemon-name {
+            @include body-s;
+          }
+
+          > .monster-ball-image {
+            width: 20px;
+            height: 20px;
+            margin-left: auto;
+          }
+
+          &:hover {
+            background-color: #fff;
+
+            > .pokemon-image {
+              width: 80px;
+              height: 80px;
+            }
+
+            > .pokemon-number {
+              @include body-l;
+            }
+
+            > .pokemon-name {
+              @include body-l;
+            }
+
+            > .monster-ball-image {
+              width: 30px;
+              height: 30px;
+              margin-left: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
