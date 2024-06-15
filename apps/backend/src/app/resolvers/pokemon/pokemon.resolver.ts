@@ -1,21 +1,19 @@
 import { Query, Resolver } from '@nestjs/graphql';
+import { map } from 'remeda';
 
 import { fetchResource } from '../../libs/fetchResource';
-import { Pokemon, PokemonList } from '../../models/pokemon/pokemon.model';
+import { getPokemonId } from '../../libs/getPokemonId';
+import { Pokemon, PokemonResource } from '../../models/pokemon/pokemon.model';
 
 @Resolver('Pokemon')
 export class PokemonResolver {
   @Query(() => [Pokemon])
   async pokemons(): Promise<Pokemon[]> {
-    const pokemonList = await fetchResource<PokemonList>('https://pokeapi.co/api/v2/pokemon?limit=20');
-    const pokemonNamedResources = pokemonList.results;
-    const pokemon = await Promise.all(
-      pokemonNamedResources.map((resource) => {
-        let pokemonRecord = fetchResource<Pokemon>(resource.url);
-        return pokemonRecord;
-      })
+    const pokemonResource = await fetchResource<PokemonResource>(
+      'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'
     );
-
-    return pokemon;
+    const pokemonResults = pokemonResource.results;
+    const allPokemon = map(pokemonResults, (v) => ({ id: getPokemonId(v.url), name: v.name }));
+    return allPokemon;
   }
 }

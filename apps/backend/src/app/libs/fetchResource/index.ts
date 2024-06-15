@@ -1,9 +1,19 @@
+/**
+ * Fetches a resource from the specified URL and returns the response as a specified type.
+ *
+ * @template T
+ * @param {string} url - The URL of the resource to fetch.
+ * @param {RequestInit} [options={}] - Optional settings that configure the request.
+ * @returns {Promise<T>} A promise that resolves to the fetched resource of type T.
+ * @throws {Error} Throws an error if the response status is not OK (200-299). Specific errors are thrown for common HTTP status codes.
+ * @throws {Error} Throws an error if the response cannot be processed as JSON or text.
+ * @returns
+ */
 export async function fetchResource<T>(url: string, options: RequestInit = {}): Promise<T> {
   try {
     const response = await fetch(url, options);
 
     if (!response.ok) {
-      // エラーハンドリング
       switch (response.status) {
         case 400:
           throw new Error('400 Bad Request: The server could not understand the request due to invalid syntax.');
@@ -22,13 +32,11 @@ export async function fetchResource<T>(url: string, options: RequestInit = {}): 
       }
     }
 
-    // レスポンスがJSON形式の場合の処理
     const contentType = response.headers.get('content-type');
     if (contentType?.includes('application/json')) {
       return (await response.json()) as T;
     }
 
-    // テキスト形式のレスポンスの処理
     return (await response.text()) as unknown as T;
   } catch (error) {
     console.error('Fetch error:', (error as Error).message);

@@ -1,5 +1,5 @@
-@import '../../../../styles/typograpy/typograpy';
-@import '../../../../styles/responsive/responsive';
+@import '@/app/styles/typograpy/typograpy';
+@import '@/app/styles/responsive/responsive';
 
 .heading-secondary {
   @include pc-title-h2;

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import PokemonLogoImage from '../../../../assets/images/pokemon-logo.webp';
+import PokemonLogoImage from '@/assets/images/pokemon-logo.webp';
+
 import styles from './Header.organism.module.scss';
 
 const Header: React.FC = () => {
