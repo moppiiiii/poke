@@ -1,5 +1,7 @@
 import React from 'react';
 
+import type { PokeListComponentProps } from '@/app/components/templates/poke-book/_organisms/PokeList/types';
+
 import PokeBookTemplate from '../../components/templates/poke-book/PokeBook.template';
 import type { PokeBookTemplateProps } from '../../components/templates/poke-book/type';
 import { useGetPokemonDetailLazyQuery, useGetPokemonsQuery } from '../../graphql/generate/generated';
@@ -21,14 +23,17 @@ const PokeBookPage: React.FC = () => {
    */
   const onClickPokemon = (id: number) => {
     getPokemonDetail({ variables: { id } });
-    console.log(pokemonDetailData);
+  };
+
+  const pokeListComponentProps: PokeListComponentProps = {
+    pokemons: allPokemonsData?.pokemons,
+    onClickPokemon,
   };
 
   const pokeBookTemplateProps: PokeBookTemplateProps = {
     isLoading: allPokemonsLoading,
-    pokemons: allPokemonsData?.pokemons,
+    pokeListComponentProps,
     pokemonDetail: pokemonDetailData?.pokemonDetail,
-    onClickPokemon,
   };
 
   return <PokeBookTemplate {...pokeBookTemplateProps} />;
