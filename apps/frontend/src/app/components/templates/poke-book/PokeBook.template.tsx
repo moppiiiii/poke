@@ -3,11 +3,16 @@ import React from 'react';
 import Header from '@/app/components/organisms/header/Header.organism';
 import Loading from '@/app/components/organisms/loading/Loading.organism';
 
+import PokeDetail from './_organisms/PokeDetail/PokeDetail.organism';
 import PokeList from './_organisms/PokeList/PokeList.organism';
 import styles from './PokeBook.template.module.scss';
 import type { PokeBookTemplateProps } from './type';
 
-const PokeBookTemplate: React.FC<PokeBookTemplateProps> = ({ isLoading, pokeListComponentProps, pokemonDetail }) => {
+const PokeBookTemplate: React.FC<PokeBookTemplateProps> = ({
+  isLoading,
+  pokeListComponentProps,
+  pokeDetailComponentProps,
+}) => {
   return (
     <div className={styles['pokemon-container']}>
       {isLoading && <Loading />}
@@ -15,7 +20,7 @@ const PokeBookTemplate: React.FC<PokeBookTemplateProps> = ({ isLoading, pokeList
 
       <div className={styles['pokemon-content-container']}>
         <div className={styles['pokemon-detail-wrapper']}>
-          {pokemonDetail ? <div>{pokemonDetail.name}</div> : <p>Please select a Pokémon</p>}
+          <PokeDetail {...pokeDetailComponentProps} />
         </div>
 
         <div className={styles['pokemon-list-wrapper']}>

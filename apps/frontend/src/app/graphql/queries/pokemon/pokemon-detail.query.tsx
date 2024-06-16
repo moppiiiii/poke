@@ -8,12 +8,8 @@ export const POKEMON_DETAIL = gql`
       height
       weight
       sprites {
-        other {
-          showdown {
-            back_default
-            front_default
-          }
-        }
+        front_default
+        back_default
       }
       cries {
         latest

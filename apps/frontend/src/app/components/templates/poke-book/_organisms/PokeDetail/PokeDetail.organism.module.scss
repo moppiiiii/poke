@@ -1,0 +1,63 @@
+@import '@/app/styles/typograpy/typograpy';
+@import '@/app/styles/responsive/responsive';
+
+.pokemon-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  height: 100%;
+  padding: 64px;
+
+  > .pokemon-detail-words-wrapper {
+    display: flex;
+    gap: 16px;
+
+    > .pokemon-detail-description {
+      @include body-xl;
+    }
+  }
+
+  > .pokemon-types-wrapper {
+    display: flex;
+    gap: 8px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  > .pokemon-detail-body-size-wrapper {
+    display: flex;
+    gap: 16px;
+
+    > .pokemon-detail-body-size-description {
+      @include body-m;
+    }
+  }
+
+  > .pokemon-images-wrapper {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+
+    > img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+.pokemon-unselected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  > .select-pokemon-message {
+    @include body-l;
+
+    color: var(--text-gray);
+  }
+}
