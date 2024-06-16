@@ -209,13 +209,7 @@ export type GetPokemonDetailQuery = {
     name: string;
     height: number;
     weight: number;
-    sprites: {
-      __typename?: 'Sprites';
-      other?: {
-        __typename?: 'OtherSprites';
-        showdown: { __typename?: 'Sprite'; back_default?: string | null; front_default: string };
-      } | null;
-    };
+    sprites: { __typename?: 'Sprites'; front_default: string; back_default: string };
     cries: { __typename?: 'Cries'; latest: string };
     types: { __typename?: 'Type'; type: { __typename?: 'NamedAPIResource'; name: string } }[];
   };
@@ -243,12 +237,8 @@ export const GetPokemonDetailDocument = gql`
       height
       weight
       sprites {
-        other {
-          showdown {
-            back_default
-            front_default
-          }
-        }
+        front_default
+        back_default
       }
       cries {
         latest

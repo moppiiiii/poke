@@ -37,6 +37,10 @@
   @include font(60px, 700, 1.4);
 }
 
+@mixin body-xl {
+  @include font(24px, 700, 1.6);
+}
+
 @mixin body-l {
   @include font(20px, 700, 1.4);
 }
