@@ -1,8 +1,8 @@
-import type { Pokemon, PokemonDetail } from '../../../graphql/generate/generated';
+import type { PokemonDetail } from '../../../graphql/generate/generated';
+import type { PokeListComponentProps } from './_organisms/PokeList/types';
 
 export type PokeBookTemplateProps = {
   isLoading: boolean;
-  pokemons?: Pokemon[];
+  pokeListComponentProps: PokeListComponentProps;
   pokemonDetail?: PokemonDetail;
-  onClickPokemon: (id: number) => void;
 };
