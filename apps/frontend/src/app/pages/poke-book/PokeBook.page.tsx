@@ -25,6 +25,7 @@ const PokeBookPage: React.FC = () => {
    */
   const onClickPokemon = (id: number) => {
     getPokemonDetail({ variables: { id } });
+    console.log(pokemonDetailData);
   };
 
   const pokeListComponentProps: PokeListComponentProps = {

@@ -5,7 +5,7 @@ import { POKEMONS } from '../../_data/pokemons.data';
 import PokeList from './PokeList.organism';
 
 export default {
-  title: 'PokeBook/Organisms/PokeList',
+  title: 'Templates/PokeBook/Organisms/PokeList',
   component: PokeList,
 } as Meta<typeof PokeList>;
 
