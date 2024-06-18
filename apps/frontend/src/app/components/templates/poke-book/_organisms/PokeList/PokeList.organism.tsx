@@ -9,9 +9,9 @@ import type { PokeListComponentProps } from './types';
 
 const PokeList: React.FC<PokeListComponentProps> = ({ pokemons, onClickPokemon }) => {
   return (
-    <>
+    <div className={styles['pokemon-list']}>
       {pokemons && (
-        <div className={styles['pokemon-list']}>
+        <div className={styles['pokemon-list-items']}>
           {pokemons.map((pokemon) => {
             return (
               <div
@@ -28,7 +28,7 @@ const PokeList: React.FC<PokeListComponentProps> = ({ pokemons, onClickPokemon }
           })}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

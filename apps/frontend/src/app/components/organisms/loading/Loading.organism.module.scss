@@ -1,32 +1,6 @@
 @import '@/app/styles/typograpy/typograpy';
 @import '@/app/styles/responsive/responsive';
 
-@keyframes flip {
-  0%,
-  50% {
-    transform: scaleX(1);
-  }
-
-  51%,
-  100% {
-    transform: scaleX(-1);
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 .loading-container {
   position: fixed;
   top: 0;
@@ -41,16 +15,12 @@
   background: rgb(68 65 65 / 50%);
 
   > .content-wrapper {
-    > .loading-emoji {
-      @include body-emoji;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-      animation: flip 0.5s infinite steps(2, end);
-    }
-
-    > .loading-word {
-      font-size: 24px;
-      color: white;
-      animation: blink 1s infinite;
+    > img {
+      width: 80px;
     }
   }
 }
@@ -58,14 +28,8 @@
 @include max('sp') {
   .loading-container {
     .content-wrapper {
-      .loading-emoji {
-        font-size: 48px;
-        animation: flip 0.5s infinite steps(2, end);
-      }
-
-      .loading-word {
-        font-size: 16px;
-        color: white;
+      > img {
+        width: 80px;
       }
     }
   }
